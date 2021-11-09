@@ -14,7 +14,7 @@ const Links = () => {
         <REACT_LINK to="/dashboard">dashboard</REACT_LINK>
       </Li>
       <Li>
-        <REACT_LINK to="/register">register</REACT_LINK>
+        <REACT_LINK to="/admin">admin</REACT_LINK>
       </Li>
     </UL>
   );

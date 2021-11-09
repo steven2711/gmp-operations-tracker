@@ -1,8 +1,10 @@
+import Router from "./routing/Router";
+
 function App() {
   return (
-    <div>
-      <h1>suh, dew</h1>
-    </div>
+    <>
+      <Router />
+    </>
   );
 }
 

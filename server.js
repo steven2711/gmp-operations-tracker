@@ -1,18 +1,19 @@
 const express = require("express");
-const connectDB = require("./config/db");
+const db = require("./connection/db");
 require("dotenv").config();
 require("colors");
-
+const cors = require("cors");
 // Create app
 const app = express();
 
 // Middleware
+app.use(cors());
 app.use(express.json({ extended: false }));
 
 // Needs security implemented
 
 // Connect to DB
-// connectDB();
+db();
 
 // Routes
 

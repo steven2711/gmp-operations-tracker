@@ -1,10 +1,14 @@
 import React from "react";
+import Logo from "./Logo";
+import Links from "./Links";
+import Nav from "../../../elements/Nav";
 
 const Navbar = () => {
   return (
-    <div>
-      <h1>Navbar goes here</h1>
-    </div>
+    <Nav>
+      <Logo />
+      <Links />
+    </Nav>
   );
 };
 

@@ -18,6 +18,7 @@ db();
 // Routes
 app.use("/api/v1/users", require("./routes/users"));
 app.use("/api/v1/auth", require("./routes/auth"));
+app.use("/api/v1/ingredients", require("./routes/ingredients"));
 
 // Serve static assets in production
 if (process.env.NODE_ENV === "production") {

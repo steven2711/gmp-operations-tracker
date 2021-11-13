@@ -1,5 +1,5 @@
 const express = require("express");
-const db = require("./connection/db");
+const testConnection = require("./connection/db");
 require("dotenv").config();
 require("colors");
 const morgan = require("morgan");
@@ -20,7 +20,7 @@ if (process.env.NODE_ENV === "development") {
 // Needs security implemented
 
 // Connect to DB
-db();
+testConnection();
 
 // Routes
 app.use("/api/v1/users", require("./routes/users"));

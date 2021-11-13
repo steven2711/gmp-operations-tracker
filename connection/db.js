@@ -1,6 +1,6 @@
 const { Sequelize } = require("sequelize");
 
-const db = async () => {
+const testConnection = async () => {
   const sequelize = new Sequelize("gmpmanager", "postgres", "password", {
     host: "localhost",
     dialect: "postgres",
@@ -16,4 +16,4 @@ const db = async () => {
   }
 };
 
-module.exports = db;
+module.exports = testConnection;

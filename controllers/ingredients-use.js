@@ -11,7 +11,19 @@ exports.getAllIngredientUseLogs = async (req, res) => {
 // @access Private/Admin
 
 exports.createIngredientUseLogItem = async (req, res) => {
-  res.status(201).json({ msg: "Ingredient used has been created" });
+  const {
+    ingredient_code,
+    product_code_made,
+    amount_used,
+    formula_mg,
+    date_logged,
+    user_id,
+    total_weight_mg,
+  } = req.body;
+
+  res
+    .status(201)
+    .json({ msg: `Ingredient ${ingredient_code} has been added to 'use' log` });
 };
 
 // @route PUT api/v1/ingredients/use/:id
@@ -24,7 +36,7 @@ exports.updateIngredientUseLogItem = async (req, res) => {
   // User would need Admin to approve of any updates.
 
   res
-    .status(20)
+    .status(200)
     .json({ msg: `Ingredient log item ${req.params.id} has been updated` });
 };
 
@@ -36,6 +48,6 @@ exports.deleteIngredientUseLogItem = async (req, res) => {
   // Check to see if log item exists
 
   res
-    .status(20)
+    .status(200)
     .json({ msg: `Ingredient use ${req.params.id} has been deleted` });
 };

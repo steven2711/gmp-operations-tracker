@@ -8,4 +8,5 @@
 
 # Features
 
-1. Implement a change log that tracks all CRUD and login/logout from users/admin
+1. Implement a change log that tracks all CRUD and login/logout from users/admin.
+2. Tasks can be automated to repeat daily, weekly, monthly, etc.

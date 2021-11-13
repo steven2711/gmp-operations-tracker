@@ -13,12 +13,12 @@ exports.getUsers = async (req, res) => {
 // @access Admin
 
 exports.createUser = async (req, res) => {
-  const { firstName, lastName, email, password } = req.body;
+  const { firstName, lastName, email } = req.body;
 
   // Check to see if user already exists
-  // A temp password is created. On users first login, a propmt will ask user to create a personal password
+  // A temp password is provided. On users first login, a propmt will ask user to create a personal password
 
-  res.status(201).json({ msg: "User has been created" });
+  res.status(201).json({ msg: `User ${email} has been created` });
 };
 
 // @route PUT api/v1/users/:id
@@ -28,7 +28,7 @@ exports.createUser = async (req, res) => {
 exports.updateUser = async (req, res) => {
   // Check to see if user already exists
 
-  res.status(20).json({ msg: `User ${req.params.id} has been updated` });
+  res.status(200).json({ msg: `User ${req.params.id} has been updated` });
 };
 
 // @route DELETE api/v1/users/:id
@@ -38,5 +38,5 @@ exports.updateUser = async (req, res) => {
 exports.deleteUser = async (req, res) => {
   // Check to see if user already exists
 
-  res.status(20).json({ msg: `User ${req.params.id} has been deleted` });
+  res.status(200).json({ msg: `User ${req.params.id} has been deleted` });
 };
